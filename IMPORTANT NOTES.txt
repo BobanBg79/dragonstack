@@ -1,0 +1,28 @@
+POSTGRES
+for this course has been created:
+-DATABASE named dragonstacknewdb
+-DATABASE USER for dragonstacknewdb, named 'node_user_new', with password 'node_new_password'.
+and one new user on psql level
+-psql user 'dragon_user' with password 'dragon_password'. this is a superuser role.
+
+*Default user named 'postgres' has password 'boki2005' (default user comes with the installation of postgres)
+
+
+Work with Postgres on Windows command line:
+1. Open Windows command line as superadmin
+2. access postgres commandline interface by typing: 
+psql -U [name_of_the_user] // in this case: psql -U dragon_user
+
+this will prompt you to enter password, and password is 'dragon_password'
+
+after that, you are entering postgres commandline interface
+
+3. check users table:
+SELECT * FROM pg_user;
+ 
+
+WORK THROUGH CHROME BROWSER
+type for 'pgAdmin 4', then right mouse click and run as administrator
+this will open pgAdmin in browser
+
+the url: http://127.0.0.1:60685/browser/
