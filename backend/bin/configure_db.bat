@@ -10,6 +10,7 @@ createdb -U node_user_new dragonstacknewdb
 psql -U node_user_new dragonstacknewdb < .\\bin\\sql\\generation.sql
 psql -U node_user_new dragonstacknewdb < .\\bin\\sql\\dragon.sql
 psql -U node_user_new dragonstacknewdb < .\\bin\\sql\\trait.sql
+psql -U node_user_new dragonstacknewdb < .\\bin\\sql\\dragonTrait.sql
 
 node .\\bin\\insertTraits.js
 
