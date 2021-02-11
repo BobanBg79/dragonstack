@@ -3,7 +3,7 @@ const MINUTES = SECONDS * 60;
 const HOURS = MINUTES * 60;
 const DAYS = HOURS * 24;
 
-const REFRESH_RATE = 10; // units
+const REFRESH_RATE = 20; // units
 
 module.exports = {
   SECONDS,
