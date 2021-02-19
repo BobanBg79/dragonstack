@@ -3,9 +3,9 @@ import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import { render } from "react-dom";
 import thunk from "redux-thunk";
-import Generation from "./components/Generation";
-import Dragon from "./components/Dragon";
+import Root from "./components/Root";
 import rootReducer from "./reducers";
+import { fetchAuthenticated } from "./actions/account";
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -23,12 +23,11 @@ const store = createStore(
   composeEnhancer(applyMiddleware(thunk, loggerMiddleware))
 );
 
-render(
-  <Provider store={store}>
-    <Fragment>
-      <Generation />
-      <Dragon />
-    </Fragment>
-  </Provider>,
-  document.getElementById("root")
-);
+store.dispatch(fetchAuthenticated()).then(() => {
+  render(
+    <Provider store={store}>
+      <Root />
+    </Provider>,
+    document.getElementById("root")
+  );
+});

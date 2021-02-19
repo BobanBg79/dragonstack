@@ -3,3 +3,4 @@ frontend/.cache
 frontend/dist
 backend/node_modules
 backend/secrets
+IMPORTANT_NOTES.txt
